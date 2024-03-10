@@ -12,13 +12,23 @@
   };
   home.shellAliases = {
     nv = "nvim";
-    vi = "nvim";
   };
   home.packages = [
     pkgs.htop
   ];
 
   programs = {
+    home-manager = {
+      enable = true;
+    };
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+      vimAlias = true;
+    };
+    google-chrome = {
+      enable = true;
+    };
     firefox = {
       enable = true;
     };
