@@ -10,12 +10,13 @@
   home.sessionVariables = {
     EDITOR = "nvim";
   };
-  home.shellAliases = {
-    nv = "nvim";
-  };
+  home.shellAliases = {};
   home.packages = [
     pkgs.htop
   ];
+  home.file = {
+    ".bashrc".source = ./dotfiles/.bashrc;
+  };
 
   programs = {
     home-manager = {
