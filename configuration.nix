@@ -13,6 +13,11 @@
   home.shellAliases = {};
   home.packages = [
     pkgs.htop
+    (pkgs.appimage-run.override {
+      extraPkgs = pkgs: [
+        pkgs.libthai        
+      ];
+    })
   ];
   home.file = {
     ".bashrc".source = ./dotfiles/.bashrc;
