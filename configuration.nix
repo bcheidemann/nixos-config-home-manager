@@ -18,6 +18,9 @@
         pkgs.libthai        
       ];
     })
+
+    # Applications
+    pkgs.spotify
   ];
   home.file = {
     ".bashrc".source = ./dotfiles/.bashrc;
