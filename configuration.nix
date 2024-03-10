@@ -9,8 +9,11 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
+    XDG_DATA_DIRS = "$XDG_DATA_DIRS:/var/lib/flatpak/exports/share";
   };
-  home.shellAliases = {};
+  home.shellAliases = {
+    nv = "nvim";
+  };
   home.packages = [
     pkgs.htop
     (pkgs.appimage-run.override {
@@ -22,11 +25,11 @@
     # Applications
     pkgs.spotify
   ];
-  home.file = {
-    ".bashrc".source = ./dotfiles/.bashrc;
-  };
 
   programs = {
+    bash = {
+      enable = true;
+    };
     home-manager = {
       enable = true;
     };
@@ -57,13 +60,6 @@
       enableExtensionUpdateCheck = true;
       userSettings = {
         "window.titleBarStyle" = "custom";
-        "editor.fontFamily" = "'M+1Code Nerd Font','Droid Sans Mono', 'monospace', monospace";
-        "github.copilot.enable" = {
-          "*" = true;
-          "plaintext" = false;
-          "markdown" = true;
-          "scminput" = false;
-        };
       };
     };
   };
