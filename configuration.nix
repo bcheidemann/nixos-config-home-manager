@@ -24,6 +24,9 @@
 
     # Applications
     pkgs.spotify
+
+    # Tools
+    pkgs.lazygit
   ];
 
   home.file.".config/hypr" = {
