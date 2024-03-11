@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+  programs.home-manager.enable = true;
+
   home.username = "ben";
   home.homeDirectory = "/home/ben";
   home.stateVersion = "23.11";
@@ -37,9 +39,6 @@
 
   programs = {
     bash = {
-      enable = true;
-    };
-    home-manager = {
       enable = true;
     };
     neovim = {
