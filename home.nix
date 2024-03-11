@@ -15,6 +15,7 @@
   };
   home.shellAliases = {
     nv = "nvim";
+    lg = "lazygit";
   };
   home.packages = [
     pkgs.htop
@@ -26,6 +27,14 @@
 
     # Applications
     pkgs.spotify
+    (pkgs.appimageTools.wrapType2 {
+      name = "warp";
+      src = pkgs.fetchurl {
+        url = "https://releases.warp.dev/stable/v0.2024.03.05.08.02.stable_01/Warp-x86_64.AppImage";
+        hash = "sha256-Ku8Wx5sA/98w/3bQPhcxfwAh52mSzc9mufusQo0Cv0E=";
+      };
+      extraPkgs = pkgs: with pkgs; [ ];
+    })
 
     # Tools
     pkgs.lazygit
