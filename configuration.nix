@@ -26,6 +26,12 @@
     pkgs.spotify
   ];
 
+  home.file.".config/hypr" = {
+    enable = true;
+    source = ./hypr;
+    recursive = true;
+  };
+
   programs = {
     bash = {
       enable = true;
