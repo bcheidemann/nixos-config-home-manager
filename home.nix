@@ -26,6 +26,7 @@
     })
 
     # Applications
+    pkgs.libreoffice
     pkgs.pika-backup
     pkgs.spotify
     (pkgs.appimageTools.wrapType2 {
