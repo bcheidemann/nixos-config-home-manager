@@ -69,6 +69,7 @@
       userEmail = "ben@heidemann.dev";
       extraConfig = {
         init.defaultBranch = "main";
+	credential.helper = "${pkgs.gh}/bin/gh auth git-credential";
       };
     };
     # VS Code on Wayland has issues, make sure to set the title bar to custom
