@@ -26,6 +26,7 @@
     })
 
     # Applications
+    pkgs.pika-backup
     pkgs.spotify
     (pkgs.appimageTools.wrapType2 {
       name = "warp";
