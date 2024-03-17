@@ -26,6 +26,7 @@
     })
 
     # Applications
+    pkgs.whatsapp-for-linux
     pkgs.libreoffice
     pkgs.pika-backup
     pkgs.spotify
