@@ -15,6 +15,7 @@
   };
   home.shellAliases = {};
   home.packages = [
+    pkgs.rustup
     pkgs.wasmtime
     pkgs.bat
     pkgs.htop
