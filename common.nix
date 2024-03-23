@@ -15,6 +15,7 @@
   };
   home.shellAliases = {};
   home.packages = [
+    pkgs.wasmtime
     pkgs.bat
     pkgs.htop
     (pkgs.appimage-run.override {
