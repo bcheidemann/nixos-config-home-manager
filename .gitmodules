@@ -1,3 +1,6 @@
 [submodule ".dotfiles"]
 	path = .dotfiles
 	url = https://github.com/bcheidemann/.dotfiles.git
+[submodule "kickstart.nvim"]
+	path = kickstart.nvim
+	url = https://github.com/bcheidemann/kickstart.nvim.git

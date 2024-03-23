@@ -48,6 +48,12 @@
     recursive = true;
   };
 
+  home.file.".config/nvim" = {
+    enable = true;
+    source = ./kickstart.nvim;
+    recursive = true;
+  };
+
   programs = {
     bash = {
       enable = true;
