@@ -13,11 +13,7 @@
     EDITOR = "nvim";
     XDG_DATA_DIRS = "$XDG_DATA_DIRS:/var/lib/flatpak/exports/share";
   };
-  home.shellAliases = {
-    nv = "nvim";
-    lg = "lazygit";
-    z  = "zellij";
-  };
+  home.shellAliases = {};
   home.packages = [
     pkgs.bat
     pkgs.htop
@@ -54,6 +50,11 @@
   programs = {
     bash = {
       enable = true;
+      initExtra = ''
+        # Common Aliases
+        export DOTFILES_PATH=/home/ben/.config/home-manager/.dotfiles
+        source $DOTFILES_PATH/.aliases
+      '';
     };
     neovim = {
       enable = true;
