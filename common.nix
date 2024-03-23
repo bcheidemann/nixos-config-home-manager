@@ -19,6 +19,7 @@
     z  = "zellij";
   };
   home.packages = [
+    pkgs.bat
     pkgs.htop
     (pkgs.appimage-run.override {
       extraPkgs = pkgs: [
@@ -71,7 +72,8 @@
       userEmail = "ben@heidemann.dev";
       extraConfig = {
         init.defaultBranch = "main";
-	credential.helper = "${pkgs.gh}/bin/gh auth git-credential";
+        credential.helper = "${pkgs.gh}/bin/gh auth git-credential";
+        core.excludesfile = "/home/ben/.config/home-manager/.dotfiles/.gitignore";
       };
     };
     # VS Code on Wayland has issues, make sure to set the title bar to custom
