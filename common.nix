@@ -1,21 +1,10 @@
-{
-  # Nix
-  config,
-  pkgs,
-
-  # Options
-  homeDir,
-  username,
-
-  # Rest
-  ...
-}:
+{ config, pkgs, opts, ... }:
 
 {
   programs.home-manager.enable = true;
 
-  home.username = username;
-  home.homeDirectory = homeDir;
+  home.username = opts.username;
+  home.homeDirectory = opts.homeDir;
   home.stateVersion = "23.11";
 
   nixpkgs.config.allowUnfree = true;
