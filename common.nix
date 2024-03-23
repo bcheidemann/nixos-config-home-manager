@@ -16,6 +16,7 @@
   home.shellAliases = {
     nv = "nvim";
     lg = "lazygit";
+    z  = "zellij";
   };
   home.packages = [
     pkgs.htop
